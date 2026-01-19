@@ -1,11 +1,8 @@
-
 import React, { useMemo } from 'react';
 import { 
-  AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
-  BarChart, Bar, Cell, PieChart, Pie
+  AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer
 } from 'recharts';
-// Import BarChart3 icon from lucide-react
-import { TrendingUp, TrendingDown, Activity, Percent, Target, History, BarChart3 } from 'lucide-react';
+import { TrendingUp, Activity, Percent, Target, History, BarChart3 } from 'lucide-react';
 import { Trade } from '../types';
 import { calculateStats, getEquityCurveData } from '../utils/calculations';
 
@@ -131,7 +128,7 @@ const Dashboard: React.FC<DashboardProps> = ({ trades }) => {
                 acc[trade.strategy] = (acc[trade.strategy] || 0) + (trade.pnl || 0);
                 return acc;
               }, {} as Record<string, number>)
-            ).map(([strategy, pnl]: [string, number]) => ( // Explicitly typed as number to resolve unknown operator and property errors
+            ).map(([strategy, pnl]: [string, number]) => (
               <div key={strategy}>
                 <div className="flex justify-between items-center mb-1.5">
                   <span className="text-sm text-zinc-400 font-medium">{strategy}</span>

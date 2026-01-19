@@ -1,5 +1,4 @@
-
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { X, Save, AlertCircle } from 'lucide-react';
 import { Trade, TradeSide, TradeStatus } from '../types';
 

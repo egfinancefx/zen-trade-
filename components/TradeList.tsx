@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { Edit2, Trash2, Search, Filter, ExternalLink } from 'lucide-react';
+import { Edit2, Trash2, Search, Filter } from 'lucide-react';
 import { Trade } from '../types';
 
 interface TradeListProps {

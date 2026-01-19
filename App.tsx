@@ -1,7 +1,6 @@
-
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import { HashRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { LayoutDashboard, List, BarChart3, Plus, Settings, BrainCircuit, Wallet } from 'lucide-react';
+import { LayoutDashboard, List, Plus, Settings, BrainCircuit, Wallet } from 'lucide-react';
 import Dashboard from './components/Dashboard';
 import TradeList from './components/TradeList';
 import TradeForm from './components/TradeForm';
@@ -77,7 +76,6 @@ const App: React.FC = () => {
         <main className="flex-1 overflow-y-auto custom-scrollbar">
           <header className="h-16 border-b border-zinc-800 bg-[#0d0d0f]/50 backdrop-blur-md sticky top-0 z-10 px-8 flex items-center justify-between">
             <h2 className="text-sm font-medium text-zinc-400 uppercase tracking-widest">
-              {/* Dynamic Header Title based on route could go here */}
               Trading Journal v1.0
             </h2>
             <div className="flex items-center gap-4">
